@@ -48,21 +48,22 @@ MY_EMPLOYEE_COUNT: Final[int] = 150
 
 # See the other file for examples.
 # TODO: Declare and initialize a string (str) variable of your choice below:
-
+city = "Milwaukee"
 
 # TODO: Declare and initialize an integer (int) variable of your choice below:
-
+population_count = 563531
 
 # TODO: Declare and initialize a float (float) variable of your choice below:
 
+days_until_summer = 155.5
 
 # TODO: Declare and initialize a boolean (bool) variable of your choice (True or False) below:
-
+summer_is_too_far = True
 
 # TODO: Declare and initialize a list of strings (list[str]) variable of your choice below:
 # REQ: Strings must be in quotes and items are separated by commas,
 # REQ: The list is wrapped in square brackets. (See the other file for examples.)
-
+city_culture = ["diverse", "Brewers", "beer", "fish fries", "construction"]
 
 # === DECLARE A FUNCTION TO FORMAT THE INFORMATION ===
 
