@@ -99,8 +99,8 @@ def get_statistics() -> str:
     # Initialize sample data - snowfall measurements in inches.
     # REQ: Vary ONE of the sample data values.
     # See how the statistics change when you do.
-    # TODO: Change one of the values in the list below.
-    snowfall_inches: list[float] = [2.5, 3.5, 4.5, 5.5, 6.5]
+
+    snowfall_inches: list[float] = [2.5, 3.5, 3.9, 5.5, 6.5]
 
     # Calculate descriptive statistics below - see other file for examples.
 
@@ -109,24 +109,20 @@ def get_statistics() -> str:
 
     # Example : Calculate count of measurements.
     count: int = len(snowfall_inches)
-
-    # TODO: Calculate minimum and maximum snowfall (see other file for examples).
-
+    maximum: float = max(snowfall_inches)
+    minimum: float = min(snowfall_inches)
     # Use the statistics module to calculate average.
     average: float = statistics.mean(snowfall_inches) if count > 0 else 0.0
-
-    # TODO: Use the statistics module to calculate standard deviation below:
-
+    standard_deviation: float = statistics.stdev(snowfall_inches)
     # Build a formatted multi-line string using f and triple quotes.
     summary: str = f"""
     Descriptive Statistics for Snowfall (inches):
         Total snowfall: {total:.2f} inches
-        TODO: Add your count of measurements below:
-
-        TODO: Add your minimum and maximum snowfall below:
-
+        Measurement Count: {count}
+        Maximum snowfall: {maximum} inches
+        Minimum snowfall: {minimum} inches
         Average snowfall: {average:.2f} inches
-        TODO: Add your standard deviation below:
+        Standard Deviation of measurements: {round(standard_deviation,3)}
 
     """
 
