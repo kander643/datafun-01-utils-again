@@ -47,23 +47,18 @@ MY_ANALYTICS_COMPANY: Final[str] = "DataFun Analytics"
 MY_EMPLOYEE_COUNT: Final[int] = 150
 
 # See the other file for examples.
-# TODO: Declare and initialize a string (str) variable of your choice below:
-city = "Milwaukee"
 
-# TODO: Declare and initialize an integer (int) variable of your choice below:
-population_count = 563531
-
-# TODO: Declare and initialize a float (float) variable of your choice below:
-
-days_until_summer = 155.5
-
-# TODO: Declare and initialize a boolean (bool) variable of your choice (True or False) below:
-summer_is_too_far = True
-
-# TODO: Declare and initialize a list of strings (list[str]) variable of your choice below:
-# REQ: Strings must be in quotes and items are separated by commas,
-# REQ: The list is wrapped in square brackets. (See the other file for examples.)
-city_culture = ["diverse", "Brewers", "beer", "fish fries", "construction"]
+city: Final[str] = "Milwaukee"
+population_count: Final[int] = 563531
+days_until_summer: Final[float] = 155.5
+summer_is_too_far: Final[bool] = True
+city_culture: Final[list[str]] = [
+    "diverse",
+    "Brewers",
+    "beer",
+    "fish fries",
+    "construction",
+]
 
 # === DECLARE A FUNCTION TO FORMAT THE INFORMATION ===
 
@@ -75,20 +70,15 @@ def get_summary() -> str:
 
     Returns: - a formatted multi-line string (starts with f and wrapped in triple quotes).
     """
-    # TODO: Create and return a multi-line f-string (triple-quoted) that includes
-    # all of the global variables you declared above, each on its own line,
-    # labeled clearly with descriptive text.
-    # See the other file for an example. Remember to start the string with an f!
     summary: str = f"""
     Custom Information:
         Company name: {MY_ANALYTICS_COMPANY}
         Employee count: {MY_EMPLOYEE_COUNT}
-        TODO: Add your other global variables below:
-
-
-
-
-
+        City: {city}
+        Population count: {population_count}
+        Days until summer break from work: {days_until_summer}
+        Summer is too far: {summer_is_too_far}
+        City Culture: {city_culture}
     """
 
     LOG.info("Generated formatted multi-line SUMMARY string.")
